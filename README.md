@@ -1,2 +1,2 @@
 # Daily-JS
-Try to push daily a JavaScript code for 30 days
+Try to push JavaScript code for Leetcode,interview bit questions for 30 days
