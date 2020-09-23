@@ -1,0 +1,22 @@
+/**
+ * @param {number[]} gas
+ * @param {number[]} cost
+ * @return {number}
+ */
+var canCompleteCircuit = function(gas, cost) {
+    let tank=0;
+    let total=0;
+    let start=0;
+    let curr_gas=0;
+    for(let i=0; i<gas.length; i++){
+        curr_gas = gas[i]-cost[i];
+        tank+= curr_gas;
+        total+=curr_gas;
+        
+        if(tank<0){
+            start = i+1;
+            tank=0;
+        }
+    }
+    return total<0? -1: start ;
+};
